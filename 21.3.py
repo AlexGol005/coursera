@@ -8,7 +8,9 @@ for line in inFile:
     else:
         dict_[int(line[2])].append(int(line[3]))
 
-print(dict_)
+for i in dict_.keys():
+    print(i, sum(dict_[i])/len(dict_[i]), file=outFile, end=' ')
+
 
 inFile.close()
 outFile.close()
