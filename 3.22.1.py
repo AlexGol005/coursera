@@ -17,12 +17,12 @@ for line in inFile:
     man = Man()
     man.surname = tempManData[0]
     man.name = tempManData[1]
-    man.sch_num = tempManData[2]
-    man.middle_grade = tempManData[3]
+    man.sch_num = int(tempManData[2])
+    man.middle_grade = int(tempManData[3])
     peopleList.append(man)
 peopleList.sort(key=manKey)
 for man in peopleList:
-    print(man.surname, man.name, man.sch_num, man.middle_grade, file=outFile)
+    print(man.surname, man.name, man.middle_grade, file=outFile)
 
 inFile.close()
 outFile.close()
